@@ -1,4 +1,6 @@
 
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using ExaminantionSystem.API.Data;
 using ExaminantionSystem.API.Entities;
 using ExaminantionSystem.API.Extensions;
@@ -22,7 +24,11 @@ namespace ExaminantionSystem.API
             builder.Services.AddDependencyInjectionServicesConfig(builder.Configuration);
             builder.Services.AddIdentityServicesConfigration(builder.Configuration);
 
-
+            builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+            builder.Host.ConfigureContainer<ContainerBuilder>(builder =>
+            {
+                builder.RegisterModule(new AutoFacModul());
+            });
 
             var app = builder.Build();
 

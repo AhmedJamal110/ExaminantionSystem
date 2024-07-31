@@ -5,13 +5,13 @@ using Microsoft.AspNetCore.Identity;
 
 namespace ExaminantionSystem.API.Services
 {
-    public class UserService : IUserService
+    public class StudentCourseService : IStudentCourseService
     {
         private readonly IGenericRepository<StudentCourse> _studentRepo;
         private readonly IGenericRepository<Course> _courseRepo;
         private readonly UserManager<AppUser> _userManager;
 
-        public UserService(IGenericRepository<StudentCourse> studentRepo , IGenericRepository<Course> courseRepo , UserManager<AppUser> userManager )
+        public StudentCourseService(IGenericRepository<StudentCourse> studentRepo , IGenericRepository<Course> courseRepo , UserManager<AppUser> userManager )
         {
             _studentRepo = studentRepo;
             _courseRepo = courseRepo;

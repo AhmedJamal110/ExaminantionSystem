@@ -19,11 +19,11 @@ namespace ExaminantionSystem.API.Extensions
                 opt.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
             });
 
-            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-            services.AddScoped<ICourseService, CourseService>();
-            services.AddAutoMapper(typeof(ProfileMapping));
-            services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IQuizServices, QuizServices>();
+
+
+
+                  services.AddAutoMapper(typeof(ProfileMapping));
+     
 
             //FluentValidation
                  services.AddFluentValidationConfigration();

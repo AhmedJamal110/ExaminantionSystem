@@ -14,9 +14,9 @@ namespace ExaminantionSystem.API.Controllers
     public class CoursesController : ControllerBase
     {
         private readonly ICourseService _courseService;
-        private readonly IUserService _userService;
+        private readonly IStudentCourseService _userService;
 
-        public CoursesController(ICourseService courseService , IUserService userService)
+        public CoursesController(ICourseService courseService , IStudentCourseService userService)
         {
             _courseService = courseService;
             _userService = userService;

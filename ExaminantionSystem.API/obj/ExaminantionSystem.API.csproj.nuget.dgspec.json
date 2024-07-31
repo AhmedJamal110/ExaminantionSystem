@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\courses\\Projects\\ExaminantionSystem\\ExaminantionSystem.API\\ExaminantionSystem.API.csproj": {}
+    "D:\\courses\\New folder\\ExaminantionSystem.API\\ExaminantionSystem.API.csproj": {}
   },
   "projects": {
-    "D:\\courses\\Projects\\ExaminantionSystem\\ExaminantionSystem.API\\ExaminantionSystem.API.csproj": {
+    "D:\\courses\\New folder\\ExaminantionSystem.API\\ExaminantionSystem.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\courses\\Projects\\ExaminantionSystem\\ExaminantionSystem.API\\ExaminantionSystem.API.csproj",
+        "projectUniqueName": "D:\\courses\\New folder\\ExaminantionSystem.API\\ExaminantionSystem.API.csproj",
         "projectName": "ExaminantionSystem.API",
-        "projectPath": "D:\\courses\\Projects\\ExaminantionSystem\\ExaminantionSystem.API\\ExaminantionSystem.API.csproj",
+        "projectPath": "D:\\courses\\New folder\\ExaminantionSystem.API\\ExaminantionSystem.API.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\courses\\Projects\\ExaminantionSystem\\ExaminantionSystem.API\\obj\\",
+        "outputPath": "D:\\courses\\New folder\\ExaminantionSystem.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,14 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "Autofac": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
             },
             "FluentValidation": {
               "target": "Package",
