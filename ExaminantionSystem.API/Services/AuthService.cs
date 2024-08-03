@@ -37,6 +37,7 @@ namespace ExaminantionSystem.API.Services
                     Token = token
                 };
 
+
                 return response;
             }
 
@@ -55,7 +56,14 @@ namespace ExaminantionSystem.API.Services
 
             var result = await _userManager.CreateAsync(user, request.Password);
             if (result.Succeeded)
+            {
+                await _userManager.AddToRoleAsync(user, "Student");
+                 
                 return true;
+            }
+
+
+
 
             return false;
         }

@@ -153,6 +153,8 @@ D:\courses\New folder\ExaminantionSystem.API\bin\Debug\net8.0\ExaminantionSystem
 D:\courses\New folder\ExaminantionSystem.API\bin\Debug\net8.0\ExaminantionSystem.API.runtimeconfig.json
 D:\courses\New folder\ExaminantionSystem.API\bin\Debug\net8.0\ExaminantionSystem.API.dll
 D:\courses\New folder\ExaminantionSystem.API\bin\Debug\net8.0\ExaminantionSystem.API.pdb
+D:\courses\New folder\ExaminantionSystem.API\bin\Debug\net8.0\Autofac.dll
+D:\courses\New folder\ExaminantionSystem.API\bin\Debug\net8.0\Autofac.Extensions.DependencyInjection.dll
 D:\courses\New folder\ExaminantionSystem.API\bin\Debug\net8.0\AutoMapper.dll
 D:\courses\New folder\ExaminantionSystem.API\bin\Debug\net8.0\Azure.Core.dll
 D:\courses\New folder\ExaminantionSystem.API\bin\Debug\net8.0\Azure.Identity.dll
@@ -295,5 +297,3 @@ D:\courses\New folder\ExaminantionSystem.API\obj\Debug\net8.0\refint\Examinantio
 D:\courses\New folder\ExaminantionSystem.API\obj\Debug\net8.0\ExaminantionSystem.API.pdb
 D:\courses\New folder\ExaminantionSystem.API\obj\Debug\net8.0\ExaminantionSystem.API.genruntimeconfig.cache
 D:\courses\New folder\ExaminantionSystem.API\obj\Debug\net8.0\ref\ExaminantionSystem.API.dll
-D:\courses\New folder\ExaminantionSystem.API\bin\Debug\net8.0\Autofac.dll
-D:\courses\New folder\ExaminantionSystem.API\bin\Debug\net8.0\Autofac.Extensions.DependencyInjection.dll

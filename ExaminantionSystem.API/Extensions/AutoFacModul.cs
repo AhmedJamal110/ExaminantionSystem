@@ -13,6 +13,7 @@ namespace ExaminantionSystem.API.Extensions
             builder.RegisterType(typeof(CourseService)).AsImplementedInterfaces().InstancePerLifetimeScope();
             builder.RegisterType(typeof(StudentCourseService)).AsImplementedInterfaces().InstancePerLifetimeScope();
             builder.RegisterType(typeof(QuizServices)).AsImplementedInterfaces().InstancePerLifetimeScope();
+            builder.RegisterType(typeof(StudentQuizService)).AsImplementedInterfaces().InstancePerLifetimeScope();
         
         }
 

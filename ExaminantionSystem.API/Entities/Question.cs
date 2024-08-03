@@ -8,9 +8,9 @@
         public int QuizId { get; set; }
         public Quiz Quiz { get; set; } = default!;
 
-        //public ICollection<Choice> Choices { get; set; } = new List<Choice>();
-        //public ICollection<Answer> Answers { get; set; } = new List<Answer>();
-
 
     }
 }
+
+        //public ICollection<Choice> Choices { get; set; } = new List<Choice>();
+        //public ICollection<Answer> Answers { get; set; } = new List<Answer>();

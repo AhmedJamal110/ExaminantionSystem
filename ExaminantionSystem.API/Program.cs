@@ -4,7 +4,7 @@ using Autofac.Extensions.DependencyInjection;
 using ExaminantionSystem.API.Data;
 using ExaminantionSystem.API.Entities;
 using ExaminantionSystem.API.Extensions;
-
+using ExaminantionSystem.API.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,6 +23,8 @@ namespace ExaminantionSystem.API
             builder.Services.AddSwaggerDocumentationServicesCofig();
             builder.Services.AddDependencyInjectionServicesConfig(builder.Configuration);
             builder.Services.AddIdentityServicesConfigration(builder.Configuration);
+
+            builder.Services.AddScoped<IStudentCourseService, StudentCourseService>();
 
             builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
             builder.Host.ConfigureContainer<ContainerBuilder>(builder =>

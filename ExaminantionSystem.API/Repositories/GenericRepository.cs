@@ -14,8 +14,8 @@ namespace ExaminantionSystem.API.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync()
-    => await _context.Set<T>().AsNoTracking().ToListAsync();
+        public async Task<IQueryable<T>> GetAllAsync()
+            =>  _context.Set<T>().AsNoTracking();
 
 
         public async Task<T> GetAsync(int Id)
@@ -50,6 +50,12 @@ namespace ExaminantionSystem.API.Repositories
         {
             return  await _context.SaveChangesAsync();
         }
-    
+
+        public Task<T> GetWithCriteriaAsync(Expression<Func<T, bool>> expression)
+        {
+            var cirteria = _context.Set<T>().FirstOrDefaultAsync(expression);
+
+            return cirteria;
+        }
     }
 }

@@ -16,10 +16,16 @@ namespace ExaminantionSystem.API.Controllers
             _quizServices = quizServices;
         }
 
-        [HttpGet]
-        public async Task<ActionResult> GetALl()
+        [HttpGet("with-question{courseId}")]
+        public async Task<ActionResult> GetAllQuizzessWithQuestion(int courseId )
         {
-            return Ok( await _quizServices.GetAllQuizAsync());
+            return Ok( await _quizServices.GetQuizWithQuestionAsync(courseId));
+        }
+
+        [HttpGet("All{courseId}")]
+        public async Task<ActionResult> GetAllQuizzes(int courseId)
+        {
+            return Ok(await _quizServices.GetAllQuizAsync(courseId));
         }
 
 
@@ -30,9 +36,18 @@ namespace ExaminantionSystem.API.Controllers
 
             return result is null ? BadRequest() : Ok(result) ;
         }
-        
-    
-    
-    
+
+
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult> GetQuiz( int courseId, [FromRoute] int id)
+        {
+            var result = await _quizServices.GetByIdAsync(courseId , id);
+
+            return result is null ? BadRequest() : Ok(result);
+        }
+
+
+
     }
 }

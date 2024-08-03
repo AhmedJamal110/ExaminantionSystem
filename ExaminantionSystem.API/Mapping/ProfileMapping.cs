@@ -12,14 +12,15 @@ namespace ExaminantionSystem.API.Mapping
         {
             CreateMap<CourseRequest, Course>();
 
-            CreateMap<Course, CourseResponse>();
+            CreateMap<Course, CourseResponse>().ReverseMap();
 
 
             CreateMap<QuizRequest, Quiz>();
+            CreateMap<Quiz, QuizWithQuestionResponse>();
             CreateMap<Quiz, QuizResponse>();
 
             CreateMap<QuestionRequest, Question>();
-            CreateMap<Question, QuestionResponse>();
+            CreateMap<Question, QuestionResponse>().ReverseMap();
         }
 
     }

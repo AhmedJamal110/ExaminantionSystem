@@ -14,12 +14,10 @@ namespace ExaminantionSystem.API.Controllers
     public class CoursesController : ControllerBase
     {
         private readonly ICourseService _courseService;
-        private readonly IStudentCourseService _userService;
 
-        public CoursesController(ICourseService courseService , IStudentCourseService userService)
+        public CoursesController(ICourseService courseService )
         {
             _courseService = courseService;
-            _userService = userService;
         }
 
 
@@ -33,11 +31,13 @@ namespace ExaminantionSystem.API.Controllers
             return Ok(response);
          }
 
+
         [HttpGet("Courses")]
         public async Task<ActionResult> GetAllCourses()
         {
             return Ok(await _courseService.GetAllCoursesAsync());
         }
+
 
         [HttpGet("Course{id}")]
         public async Task<ActionResult> GetAllCourses([FromRoute] int id)
@@ -58,6 +58,7 @@ namespace ExaminantionSystem.API.Controllers
         }
 
 
+
         [Authorize(Roles = "Instructor")]
 
         [HttpPut("{id}")]
@@ -72,19 +73,8 @@ namespace ExaminantionSystem.API.Controllers
 
         }
 
-        [HttpPost("student-enroll{id}")]
-        [Authorize(Roles ="Student")]
-        public async Task<ActionResult> EnrollToCourse( [FromRoute] int id)
-        {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-              
-           var result = await _userService.EnrollCourse(userId, id);
-            if (result)
-                return Ok();
-           
-            return BadRequest();
-        }
-
-
+ 
+  
+    
     }
 }
